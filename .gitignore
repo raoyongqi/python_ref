@@ -1,0 +1,12 @@
+
+/python_ref
+/firefox-immersive-translate-1.15.10
+/translate
+*.xpi
+/test
+/panda_ref
+/__pycache__
+*.html
+*.exe
+*.zip
+
