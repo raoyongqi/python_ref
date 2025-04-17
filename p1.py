@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from translator import google_translate_long_text_async
 
 with open('python_ref/index.html', 'r', encoding='utf-8') as file:
     
@@ -77,7 +76,7 @@ if tutorial is not None:
 
                 font_tag.append(br_tag)
 
-                font_tag.append(google_translate_long_text_async(a_tag.text))
+                font_tag.append(a_tag.text)
 
                 font_inner_tag = soup.new_tag('font', **{
                     'class': 'notranslate immersive-translate-target-translation-theme-none immersive-translate-target-translation-block-wrapper-theme-none immersive-translate-target-translation-block-wrapper'
@@ -114,7 +113,7 @@ if tutorial is not None:
 
                         font_tag.append(br_tag)
 
-                        font_tag.append(google_translate_long_text_async(a_on_ul_tag.text))
+                        font_tag.append(a_on_ul_tag.text)
 
                         font_inner_tag = soup.new_tag('font', **{
                             'class': 'notranslate immersive-translate-target-translation-theme-none immersive-translate-target-translation-block-wrapper-theme-none immersive-translate-target-translation-block-wrapper'
@@ -126,7 +125,7 @@ if tutorial is not None:
 
     
 modified_html = soup.prettify()
-with open("p_html.html", "w", encoding="utf-8") as file:
+with open("p.html", "w", encoding="utf-8") as file:
     
     file.write(modified_html)
 
